@@ -12,6 +12,7 @@ public class RetryAnalyzer implements IRetryAnalyzer{
 	public boolean retry(ITestResult result) {
 		if(count<maxRetry) {
 			count ++;
+			System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"+result.getName());
 			return true;
 		}
 		return false;
